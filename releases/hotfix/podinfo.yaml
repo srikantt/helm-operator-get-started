@@ -1,0 +1,24 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: podinfo-hotfix
+  namespace: hotfix
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:hotfix-*
+spec:
+  releaseName: podinfo-hotfix
+  chart:
+    git: git@github.com:fluxcd/helm-operator-get-started
+    path: charts/podinfo
+    ref: master
+  values:
+    image:
+      repository: devopsdeva/podinfo
+      tag: hotfix-lwhevzcw
+    replicaCount: 2
+    hpa:
+      enabled: true
+      maxReplicas: 10
+      cpu: 50
+      memory: 128Mi
