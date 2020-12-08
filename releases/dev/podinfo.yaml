@@ -14,9 +14,7 @@ spec:
     path: charts/podinfo
     ref: master
   values:
-    image:
-      repository: devopsdeva/podinfo
-      tag: dev-hdtwcel9
+    image: devopsdeva/podinfo:dev-j6tg7du8
     replicaCount: 1
     hpa:
       enabled: false
