@@ -14,7 +14,7 @@ spec:
     path: charts/podinfo
     ref: master
   values:
-    image: devopsdeva/podinfo:dev-akd8oezs
+    image: devopsdeva/podinfo:dev-hwe2lhrl
     replicaCount: 1
     hpa:
       enabled: false
