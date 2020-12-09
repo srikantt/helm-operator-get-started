@@ -18,8 +18,9 @@ h2c:
   enabled: false
 
 image:
-  repository: stefanprodan/podinfo
-  tag: 3.1.5
+  repository: devopsdeva/podinfo
+  tag: |-
+    {{ .Chart.AppVersion }}
   pullPolicy: IfNotPresent
 
 service:
